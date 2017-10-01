@@ -1,8 +1,8 @@
-## Flick
+## Dottr
 
 ### Overview
 
-Flick is a game based on asteroids. There will be different colored dots moving around the board. 
+Dottr is a game based on asteroids. There will be different colored dots moving around the board. 
 The player will navigate their ship to "eat" the dots that matches it color and avoid the ones that don't.
 If the player hits a dot that doesn't match their color they will lose a life. Dots will respawn as the 
 player eats them. Every 5 seconds or so the player ship color will change to match a different color of dots.
@@ -17,7 +17,7 @@ player can keep going until they lose.
 * Toggle game mode
 
 ### Wireframe
-![flick-wireframe][wireframe]
+![dottr-wireframe][wireframe]
 
 ### Technologies
 
@@ -27,7 +27,7 @@ player can keep going until they lose.
 
 ### Architecture
 
-* asteroids.js :this script will contain physics logic for the dots
+* dots.js :this script will contain physics logic for the dots
 * ship.js :this script will contain logic for the player ship movement and interaction with dots
 * view.js :this script will create and update objects for the DOM
 
@@ -38,7 +38,7 @@ player can keep going until they lose.
 - [ ] Create basic game view
 
 #### Day 1:
-- [ ] Set up Asteroids with colors
+- [ ] Set up dots with colors
 - [ ] Physics of movement, collisions
 
 #### Day 2:
@@ -58,4 +58,4 @@ player can keep going until they lose.
 ### Bonus:
 - [ ] AI version (Demo)
 
-[wireframe]: https://github.com/rebekahliu/Flick/blob/master/wireframes/Untitled%20Diagram.png
+[wireframe]: https://github.com/rebekahliu/Dottr/blob/master/wireframes/Untitled%20Diagram.png
