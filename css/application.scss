@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Helvetica';
+}
+
+.game-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+canvas {
+  border-radius: 10px;
+  border: 1px black solid;
+}
+
+.instructions {
+  border-radius: 10px;
+  border: 1px black solid;
+  height: 300px;
+  padding: 10px;
+  width: 300px;
+}
