@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="css/application.scss">
   </head>
   <body>
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+    <script type="application/javascript" src="lib/bundle.js"></script>
     <h1>Dottr</h1>
     <div class="game-container">
       <div class="game">
-        <span>Score</span>
+        <span id='score'></span>
+        <span id='lives'></span>
+        <span id='timer'></span>
         <canvas id="canvas" width="500" height="500"></canvas>
       </div>
       <div class="instructions">
         <h2>Instructions</h2>
       </div>
     </div>
-    <script type="application/javascript" src="vendor/keymaster.js"></script>
-    <script type="application/javascript" src="lib/bundle.js"></script>
   </body>
 </html>
