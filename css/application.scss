@@ -4,18 +4,20 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: 'Helvetica';
+  font-weight: lighter;
 }
 
 .game-container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .game {
   display: flex;
   flex-direction: column;
+  margin-right: 30px;
 }
 
 h1 {
@@ -26,6 +28,7 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: lighter;
+  margin-top: 0px;
 }
 
 canvas {
@@ -33,10 +36,18 @@ canvas {
   border: 1px black solid;
 }
 
-.instructions {
+.instruction-container {
   border-radius: 10px;
   border: 1px black solid;
-  height: 300px;
-  padding: 10px;
+  padding: 20px;
   width: 300px;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 18px;
+  text-align: left
+}
+
+.instructions span {
 }
