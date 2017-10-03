@@ -11,17 +11,20 @@
     <h1>Dottr</h1>
     <div class="game-container">
       <div class="game">
-        <span id='score'></span>
-        <span id='lives'></span>
-        <span id='timer'></span>
+        <div class="game-displays">
+          <span id='score'></span>
+          <span id='lives'></span>
+          <!-- <span id='timer'></span> -->
+        </div>
         <canvas id="canvas" width="500" height="500"></canvas>
+        <button id="reset" type="button" name="Reset">Reset</button>
       </div>
       <div class="instruction-container">
         <h2>Instructions</h2>
         <div class='instructions'>
-          <span>Eat dots of the same color as your ship</span><br />
-          <span>Avoid dots of a different color</span><br />
           <span>Your ship will change color every 5 seconds</span><br />
+          <span>Eat dots that match your ship</span><br />
+          <span>Avoid dots that don't</span><br />
         </div>
       </div>
     </div>

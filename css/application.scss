@@ -1,3 +1,7 @@
+button {
+  border: none;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -20,6 +24,18 @@ body {
   margin-right: 30px;
 }
 
+.game-displays span {
+  margin-right: 10px;
+}
+// .game-displays {
+//   display: flex;
+//   width: 500px;
+// }
+
+.timer {
+  justify-content: flex-end;
+}
+
 h1 {
   font-size: 32px;
   font-weight: lighter;
@@ -36,6 +52,12 @@ canvas {
   border: 1px black solid;
 }
 
+button {
+  width: 50px;
+  border-radius: 5px;
+  background: #7aadff;
+}
+
 .instruction-container {
   border-radius: 10px;
   border: 1px black solid;
@@ -47,7 +69,4 @@ canvas {
 .instructions {
   font-size: 18px;
   text-align: left
-}
-
-.instructions span {
 }
