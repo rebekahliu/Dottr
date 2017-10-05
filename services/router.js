@@ -1,9 +1,16 @@
 var router = require('express').Router();
 
-var game = function(req, res) {
+function game(req, res) {
   res.render('public/index.html');
 };
 
+function protectedRoute(req, res, next) {
+  res.send("Here's the secret!");
+}
+
 router.route('/').get(game);
+
+router.route('/protected')
+      .get(protectedRoute);
 
 module.exports = router;
