@@ -166,8 +166,8 @@ class Game {
   constructor() {
     this.dots = [];
     this.ship = [];
-    this.lives = 5;
     this.points = 0;
+    this.lives = 1;
     this.speed = DEFAULTS.SPEED;
     this.colorCounter = 0;
 
@@ -240,7 +240,7 @@ class Game {
       // save Score
       debugger;
       this.points = 0;
-      this.lives = 5;
+      this.lives = 1;
     }
   }
 
@@ -382,7 +382,7 @@ class GameView {
 
   start() {
     setInterval(this.render, 20);
-    this.resetGame();
+    // this.resetGame();
   }
 
   render() {

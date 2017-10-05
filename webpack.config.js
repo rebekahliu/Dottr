@@ -1,7 +1,7 @@
 module.exports = {
-  entry: "./lib/dots.js",
+  entry: "./public/javascript/dots.js",
   output: {
-  	filename: "./lib/bundle.js"
+  	filename: "./public/javascript/bundle.js"
   },
   devtool: 'source-map',
 };

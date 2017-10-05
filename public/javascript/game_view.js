@@ -10,7 +10,7 @@ class GameView {
 
   start() {
     setInterval(this.render, 20);
-    this.resetGame();
+    // this.resetGame();
   }
 
   render() {
