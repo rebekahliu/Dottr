@@ -1,6 +1,6 @@
-const User = require('../models/user');
+const User = require('../models/user.js');
 const jwt = require('jwt-simple');
-const config = require('../config');
+const config = require('../config.js');
 
 function tokenForUser(user) {
   var timestamp = new Date().getTime();
