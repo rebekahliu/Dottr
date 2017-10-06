@@ -6,26 +6,9 @@
     <link rel="shortcut icon" href="">
   </head>
   <body>
-    <form class="" id='signupForm'>
-      <label for="email">Username:</label>
-      <input id='email' type="text" value="">
-      <label for="password">Password:</label>
-      <input id='password' type="password" value="">
 
-      <button id='submit' type="submit" name="button">Sign Up</button>
-    </form>
 
-    <script>
-      document.getElementById('signupForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/v1/signup');
-        xhr.send({
-          email: document.getElementById('email').value,
-          password: document.getElementById('password').value
-        });
-      })
-    </script>
+    
 
   </body>
 </html>

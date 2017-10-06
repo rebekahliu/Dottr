@@ -257,6 +257,17 @@ document.addEventListener("DOMContentLoaded", function(){
   new GameView(game, ctx).start();
 });
 
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/v1/signup');
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.send(JSON.stringify({
+    email: document.getElementById('email').value,
+    password: document.getElementById('password').value
+  }));
+});
+
 
 /***/ }),
 /* 4 */
