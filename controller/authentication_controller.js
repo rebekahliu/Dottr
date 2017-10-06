@@ -16,10 +16,12 @@ exports.signin = function(req, res, next) {
 };
 
 exports.signup = function(req, res, next) {
+  console.log('email', req.body.email);
+  console.log('password', req.body.password);
   var email = req.body.email;
   var password = req.body.password;
 
-  if (!email || !password) {
+  if (!email && !password) {
     return res.status(422).json({error: "You must provide an email and password!"});
   }
 
