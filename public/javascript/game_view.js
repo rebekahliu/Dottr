@@ -5,20 +5,29 @@ class GameView {
     this.game = game;
     this.ctx = ctx;
 
-    this.render = this.render.bind(this);
+    this.animate = this.animate.bind(this);
+    this.start = this.start.bind(this);
   }
 
   start() {
-    setInterval(this.render, 20);
-    // this.resetGame();
+    const instructions = document.getElementById('instruction');
+    instructions.innerHTML = "<h2>Instructions</h2><span>Move your mouse!</span><br><span>Eat dots that match your ship</span><br><span>Avoid dots that do not</span><br><span>Every 4 dots you eat, your ship will change color</span><br >"
+    this.animate();
   }
 
-  render() {
+  animate() {
+    if (this.game.checkGameOver()) {
+      this.gameOver();
+      this.restartGame();
+      return;
+    }
     this.game.step();
     this.mousemove();
     this.display();
     this.game.addDots();
     this.game.draw(this.ctx);
+
+    requestAnimationFrame(this.animate);
   }
 
   mousemove() {
@@ -40,16 +49,6 @@ class GameView {
     });
   }
 
-  resetGame() {
-    const resetButton = document.getElementById("reset");
-
-    resetButton.addEventListener("click", function() {
-      this.game.points = 0;
-      this.game.lives = 5;
-      this.game.addShip();
-    }.bind(this));
-  }
-
   display() {
     const pointDisplay = document.getElementById("score");
     pointDisplay.innerHTML = `Score: ${this.game.points}`;
@@ -57,16 +56,26 @@ class GameView {
     livesDisplay.innerHTML = `Lives: ${this.game.lives}`;
   }
 
- //  bindKeyHandlers() {
- //   const ship = this.ship;
- //
- //   Object.keys(GameView.MOVES).forEach((k) => {
- //     let move = GameView.MOVES[k];
- //     key(k, () => { ship.power(move); });
- //   });
- //
- //   key("space", () => { ship.fireBullet() });
- // }
+  gameOver() {
+    this.displayGameOver(this.game.points);
+  }
+
+  displayGameOver(points) {
+    const gameOverDisplay = document.getElementById('instruction');
+    gameOverDisplay.innerHTML = `<div class='game-over'><h2>Game over!</h2><span>Points: ${points}</span><br><button id='restart'>Play Again!</button></div>`;
+  }
+
+  restartGame() {
+    const restartButton = document.getElementById('restart');
+    // const startGame = this.start;
+    const that = this;
+    restartButton.addEventListener('click', function() {
+      that.start();
+    });
+    this.game.points = 0;
+    this.game.lives = 1;
+    this.game.dots = [];
+  }
 }
 
 module.exports = GameView;

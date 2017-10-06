@@ -2,7 +2,7 @@ var router = require('express').Router();
 
 function game(req, res) {
   res.render('public/index.html');
-};
+}
 
 function protectedRoute(req, res, next) {
   res.send("Here's the secret!");

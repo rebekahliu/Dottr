@@ -45,6 +45,7 @@ h2 {
   font-size: 24px;
   font-weight: lighter;
   margin-top: 0px;
+  text-align: center;
 }
 
 canvas {
@@ -69,4 +70,15 @@ button {
 .instructions {
   font-size: 18px;
   text-align: left
+}
+
+.game-over {
+  text-align: center;
+}
+
+button {
+  border: 1px black solid;
+  background: none;
+  width: 100px;
+  margin-top: 20px;
 }

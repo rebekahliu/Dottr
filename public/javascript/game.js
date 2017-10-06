@@ -37,15 +37,6 @@ class Game {
 
   addShip() {
     this.ship = new Ship({game: this});
-    // const timerDisplay = document.getElementById("timer");
-    // var secondsLeft = 5;
-    // var interval = setInterval(function() {
-    //   if (secondsLeft === 0) {
-    //     secondsLeft = 5;
-    //   }
-    //   timerDisplay.innerHTML = --secondsLeft;
-    // }, 1000);
-    // setInterval(this.ship.changeColor, 5000);
   }
 
   draw(ctx) {
@@ -64,7 +55,6 @@ class Game {
   }
 
   step() {
-    this.checkGameOver();
     this.move();
     this.ship.checkCollisions(this.dots);
   }
@@ -75,7 +65,6 @@ class Game {
       this.points += 1;
       this.ship.radius += 0.5;
       this.colorTimer();
-      // this.speed += 5;
     } else if (object instanceof Ship) {
       this.ship = "";
       this.addShip();
@@ -85,12 +74,7 @@ class Game {
   }
 
   checkGameOver() {
-    if (this.lives === 0) {
-      // save Score
-      debugger;
-      this.points = 0;
-      this.lives = 1;
-    }
+    return this.lives <= 0;
   }
 
   colorTimer() {
