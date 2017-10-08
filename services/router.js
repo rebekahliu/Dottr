@@ -35,4 +35,5 @@ router.route('/protected').get(requireAuth, protectedRoute);
 
 router.route('/').get(game);
 
+
 module.exports = router;
